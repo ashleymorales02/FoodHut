@@ -8,36 +8,38 @@ import java.util.Random;
 public class FoodHut {	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-	    System.out.println("Choose an option: \n1. Random breakfast idea\n2. Find a recipe");
-	    System.out.print("Your choice: ");
-	    int choice = input.nextInt();
-	    
-	    if (choice == 1) {
-	    	System.out.print("\nFor breakfast, you should have: " + RandomBreakfast() + "!\n");
-	    }
-	    else if (choice ==2 ) {
-	    	System.out.println("\n\nAvailable recipes:\n1. Philly Chesse Steak Sandwhich\n2. Chicken Parmesan");
-	    	System.out.print("Enter number of the recipe you would like: ");
-	    	int num = input.nextInt();
-	    	System.out.println(FindRecipe(num));
-	    }
-	    else 
-	    	System.out.println("Invalid input1"
-	    			+ "! Session has timed out.");
+		System.out.println("Choose an option: \n1. Random breakfast idea\n2. Find a recipe");
+		System.out.print("Your choice: ");
+		int choice = input.nextInt();
+
+		if (choice == 1) {
+			System.out.print("\nFor breakfast, you should have: " + RandomBreakfast() + "!\n");
+		}
+		else if (choice ==2 ) {
+			System.out.println("\n\nAvailable recipes:\n1. Philly Chesse Steak Sandwhich\n2. Chicken Parmesan");
+			System.out.print("Enter number of the recipe you would like: ");
+			int num = input.nextInt();
+			System.out.println(FindRecipe(num));
+		}
+		else { 
+			System.out.println("Invalid input! Session has timed out.");
+		}
 	}
 	
-  //function 1
-	public static String RandomBreakfast(){
+  	//function 1
+	
+	public static String RandomBreakfast() {
 		Random rand = new Random();
-	    int random = rand.nextInt(5);
-	    BreakfastMenu breakfast = new BreakfastMenu();
-    	breakfast.setRandom(random);
-    	return breakfast.getBreakfast();
+	    	int random = rand.nextInt(5);
+	    	BreakfastMenu breakfast = new BreakfastMenu();
+    		breakfast.setRandom(random);
+    		return breakfast.getBreakfast();
 	}
 	
 	//function 2
+	
 	public static String FindRecipe(int num) {
-	    Recipe recipe = new Recipe();
+		Recipe recipe = new Recipe();
 		return recipe.getRecipe(num-1);	
 	}
 }
@@ -46,10 +48,10 @@ class BreakfastMenu {
 	private int brandom;
 	private String[] breakfast = {"Bacon, Egg and Cheese","Scrambled Eggs and Ham","Bagel w/Cream Chesse","Bacon & Hash Browns","Buttermilk Pancakes","Homemade Waffles"};
 	
-	public void setRandom(int num) {brandom = num;};
-	public String getBreakfast() {return breakfast[brandom];};
+	public void setRandom(int num) { brandom = num; };
+	public String getBreakfast() { return breakfast[brandom]; };
 
-};
+}
 
 class Recipe {
 	private String[] recipe = 
@@ -69,7 +71,5 @@ class Recipe {
 		+ "Step 5. When melted, take out chicken and place over cooked pasta. Enjoy!"
 	};
 	
-	public String getRecipe(int num) {return recipe[num];};
+	public String getRecipe(int num) { return recipe[num]; };
 }
-
-
