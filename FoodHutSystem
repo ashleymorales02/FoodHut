@@ -1,32 +1,4 @@
-//There are two functions: 1) Get random breakfast food idea, 2) Find a recipe from available options
-
-package FoodHut;
-import java.util.Scanner;
-import java.lang.Math;
-import java.util.Random;
-
-public class FoodHut {	
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Choose an option: \n1. Random breakfast idea\n2. Find a recipe");
-		System.out.print("Your choice: ");
-		int choice = input.nextInt();
-
-		if (choice == 1) {
-			System.out.print("\nFor breakfast, you should have: " + RandomBreakfast() + "!\n");
-		}
-		else if (choice ==2 ) {
-			System.out.println("\n\nAvailable recipes:\n1. Philly Chesse Steak Sandwhich\n2. Chicken Parmesan");
-			System.out.print("Enter number of the recipe you would like: ");
-			int num = input.nextInt();
-			System.out.println(FindRecipe(num));
-		}
-		else { 
-			System.out.println("Invalid input! Session has timed out.");
-		}
-	}
-	
-  	//function 1
+//function 1 from FoodHut
 	
 	public static String RandomBreakfast() {
 		Random rand = new Random();
@@ -35,41 +7,3 @@ public class FoodHut {
     		breakfast.setRandom(random);
     		return breakfast.getBreakfast();
 	}
-	
-	//function 2
-	
-	public static String FindRecipe(int num) {
-		Recipe recipe = new Recipe();
-		return recipe.getRecipe(num-1);	
-	}
-}
-
-class BreakfastMenu {
-	private int brandom;
-	private String[] breakfast = {"Bacon, Egg and Cheese","Scrambled Eggs and Ham","Bagel w/Cream Chesse","Bacon & Hash Browns","Buttermilk Pancakes","Homemade Waffles"};
-	
-	public void setRandom(int num) { brandom = num; };
-	public String getBreakfast() { return breakfast[brandom]; };
-
-}
-
-class Recipe {
-	private String[] recipe = 
-	{
-		"\nPhilly Cheese Steak Recipe:\n"
-		+ "Step 1. Heat 1 tablespoon of oil in a large skillet over medium heat. Add sliced onions and season with salt.\n"
-		+ "Step 2. Cook for about 15 minutes until onions become caramelized.\n"
-		+ "Step 3. Set aside onions and add another tablespoon of oil to same skillet and cook steak.\n"
-		+ "Step 4. Put onion on the steak and cover with 3 slices of your preferred cheese and cook until chesse is melted.\n"
-		+ "Step 5. When done, remove from skillet and put in loaf of bread. Enjoy!",
-		
-		"\nChicken Parmesan Recipe:\n"
-		+ "Step 1. Place a piece of chicken and in flour, then in a mixture of beaten egg.\n"
-		+ "Step 2. Take the chicken and cover it completely in breading of your choice\n"
-		+ "Step 3. Place oil in a frying pan over medium heat, and fry the chicken\n"
-		+ "Step 4. When done, pour some marinara sauce over chicken and then top it with some mozzarella chesse. Melt in the oven.\n"
-		+ "Step 5. When melted, take out chicken and place over cooked pasta. Enjoy!"
-	};
-	
-	public String getRecipe(int num) { return recipe[num]; };
-}
