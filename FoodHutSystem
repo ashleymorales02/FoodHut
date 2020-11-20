@@ -1,4 +1,4 @@
-//function 1 from FoodHut
+//function 1 from FoodHut version1
 	
 	public static String RandomBreakfast() {
 		Random rand = new Random();
