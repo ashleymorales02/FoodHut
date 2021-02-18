@@ -1,0 +1,62 @@
+//  main.cpp
+
+#include <iostream>
+using namespace std;
+
+class BreakfastMenu
+{
+private:
+    int bRandom;
+    string breakfast[10] = {"Bacon, Egg and Cheese","Scrambled Eggs and Ham","Bagel w/Cream Chesse","Bacon & Hash Browns","Buttermilk Pancakes","Homemade Waffles","Western Omelet","Oatmeal","French Toast","Sausage, Egg and Cheese"};
+public:
+    void setRandom(int num) { bRandom = num; };
+    string getBreakfast() { return breakfast[bRandom]; };
+};
+
+class LunchMenu
+{
+private:
+    int lRandom;
+    string lunch[10] = {"Turkey Club","Grilled Cheese","Chicken Quesadilla","Bacon Cheese Burger","Chicken Tenders and Fries","Pizza","Cuban Sandwich","Mozzarella Sticks","Chicken Ceasar Salad","Tacos"};
+public:
+    void setRandom(int num) { lRandom = num; };
+    string getLunch() { return lunch[lRandom]; };
+};
+
+class DinnerMenu
+{
+private:
+    int dRandom;
+    string dinner[10] = {"Chicken Parmesan","Spaghetti & Meatballs","Chicken Quesadilla","Chicken and Rice Burrito Bowl","Rigatoni Bolognese","Garlic Butter Steak","Meat Stuffed Lasagna","Seafood Pasta","Sloppy Joe","Fish Tacos"};
+public:
+    void setRandom(int num) { dRandom = num; };
+    string getDinner() { return dinner[dRandom]; };
+};
+
+int main() {
+    int choice,random;
+    BreakfastMenu breakfast;
+    LunchMenu lunch;
+    DinnerMenu dinner;
+    cout << "Choose an option: \n1.Random breakfast idea \n2.Random lunch idea \n3.Randon dinner idea \n\nYou choose: ";
+    cin >> choice;
+    srand(time(NULL));
+    random = (rand() % 10);
+    
+    if (choice == 1) {
+        breakfast.setRandom(random);
+        cout << "\nFor breakfast, you should have: " + breakfast.getBreakfast() + "!\n";
+    }
+    else if (choice == 2) {
+        lunch.setRandom(random);
+        cout << "\nFor lunch, you should have: " + lunch.getLunch() + "!\n";
+    }
+    else if (choice == 3) {
+        dinner.setRandom(random);
+        cout << "\nFor dinner, you should have: " + dinner.getDinner() + "!\n";
+    }
+    else
+        cout<<"Invalid option.";
+        
+    return 0;
+}
