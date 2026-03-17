@@ -1,6 +1,6 @@
 //
-//  newProjectTestApp.swift
-//  newProjectTest
+//  foodHutApp.swift
+//  foodHut
 //
 //  Created by Ashley Morales on 3/17/26.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct newProjectTestApp: App {
+struct foodHutApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
