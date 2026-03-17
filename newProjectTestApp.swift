@@ -1,14 +1,15 @@
 //
-//  foodHutApp.swift
-//  foodHut
+//  newProjectTestApp.swift
+//  newProjectTestApp
 //
-//  Created by Ashley Morales on 3/17/26.
+//  Created by Ashley Morales on 7/15/21.
+//  Copyright © 2021 Ashley Morales. All rights reserved.
 //
 
 import SwiftUI
 
 @main
-struct foodHutApp: App {
+struct newProjectTestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
