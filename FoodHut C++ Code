@@ -38,14 +38,14 @@ int main() {
     BreakfastMenu breakfast;
     LunchMenu lunch;
     DinnerMenu dinner;
-    cout << "Choose an option: \n1.Random breakfast idea \n2.Random lunch idea \n3.Randon dinner idea \n\nYou choose: ";
+    cout << "Welcome to FoodHut. How can I help: \n1.Random breakfast idea \n2.Random lunch idea \n3.Randon dinner idea \n\nYou choose: ";
     cin >> choice;
     srand(time(NULL));
     random = (rand() % 10);
     
     if (choice == 1) {
         breakfast.setRandom(random);
-        cout << "\nFor breakfast, you should have: " + breakfast.getBreakfast() + "!\n";
+        cout << "\nYummy! Did you know that breakfast is the most important meal of the day?\nFor breakfast, you should have: " + breakfast.getBreakfast() + "!\n";
     }
     else if (choice == 2) {
         lunch.setRandom(random);
