@@ -18,4 +18,4 @@ This project was a deep dive into the iOS ecosystem. Key challenges overcome inc
 - Mastering Swift's type-safety and optionals.
 - Understanding the ViewController lifecycle.
 - Designing layouts that adapt to different iPhone screen sizes using Auto Layout.
-<img width="12" height="26" alt="Simulator Screenshot - iPhone 17 - 2026-03-18 at 14 21 07" src="https://github.com/user-attachments/assets/ecd80e08-0cc0-4f9d-b72e-d29115ff91d8" />
+<img width="120" height="260" alt="Simulator Screenshot - iPhone 17 - 2026-03-18 at 14 21 07" src="https://github.com/user-attachments/assets/ecd80e08-0cc0-4f9d-b72e-d29115ff91d8" />
