@@ -1,11 +1,11 @@
+
 //
 //  ContentView.swift
-//  newProjectTest
+//  FoodHutApp
 //
 //  Created by Ashley Morales on 7/15/21.
 //  Copyright © 2021 Ashley Morales. All rights reserved.
 //
-
 
 import SwiftUI
 
@@ -15,27 +15,24 @@ var number: Int = 0
 
 struct ContentView: View {
     @State var item: String = ""
-    //@State var emoji = "😀"
+    @State var emoji: String = ""
     var body: some View {
         ZStack {
-            Color.green.edgesIgnoringSafeArea(.all) //screen color
-            VStack(){
-                Spacer()
-                    .frame(height: 20)
+            Color.green.edgesIgnoringSafeArea(.all)
+            VStack(spacing: 10){
                 Text("Welcome to FoodHut!")
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding(.bottom)
                 Spacer()
-                    .frame(height: 10)
-                Text("Hungry but not sure what to eat? \nChoose a food category below and I'll pick for you!")
+                    .frame(height: 30)
+                Text("\nHungry but not sure what to eat? Choose a food category below and I'll pick for you!")
                     .multilineTextAlignment(.center)
                 .padding(.bottom)
-                
                 Button(action: {
                     number = 1
-                    self.item = "Good morning! \nFor breakfast, you should have...\n\n" + food.getItem(category: number)
-                    //self.emoji = "😋"
+                    self.item = "Good morning! ☀️ \nFor breakfast, you should have...\n\n" + food.getItem(category: number)
+                    self.emoji = "😋"
                 }) {
                     Text("Breakfast")
                     .padding()
@@ -43,12 +40,12 @@ struct ContentView: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(40)
                 }
+               
                 .padding(.bottom)
-                
                 Button(action: {
                     number = 2
-                    self.item = "Good afternoon! \nFor lunch, you should have...\n\n" + food.getItem(category: number)
-                    //self.emoji = "🔥"
+                    self.item = "Good afternoon! 🌇 \nFor lunch, you should have...\n\n" + food.getItem(category: number)
+                    self.emoji = "😋"
                 }) {
                     Text("Lunch")
                     .padding()
@@ -56,12 +53,12 @@ struct ContentView: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(40)
                 }
+              
                 .padding(.bottom)
-                
                 Button(action: {
                     number = 3
-                    self.item = "Good evening! \nFor dinner, you should have...\n\n" + food.getItem(category: number)
-                    //self.emoji = ""
+                    self.item = "Good evening! 🌙 \nFor dinner, you should have...\n\n" + food.getItem(category: number)
+                    self.emoji = "😋"
                 }) {
                     Text("Dinner")
                     .padding()
@@ -71,13 +68,13 @@ struct ContentView: View {
                 }
          
                 Spacer()
-                    .frame(height: 40)
+                    .frame(height: 90)
                 Text(item)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
                     .font(.system(size: 18))
-                //Text(emoji)
-                    //.font(.system(size: 36))
+                Text(emoji)
+                    .font(.system(size: 36))
             }
         }
     }
