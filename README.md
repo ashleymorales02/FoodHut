@@ -19,3 +19,5 @@ This project was a deep dive into the iOS ecosystem. Key challenges overcome inc
 - Understanding the ViewController lifecycle.
 - Designing layouts that adapt to different iPhone screen sizes using Auto Layout.
 <img width="120" height="260" alt="Simulator Screenshot - iPhone 17 - 2026-03-18 at 14 21 07" src="https://github.com/user-attachments/assets/ecd80e08-0cc0-4f9d-b72e-d29115ff91d8" />
+<img width="120" height="260" alt="Simulator Screenshot - iPhone 17 - 2026-03-18 at 14 21 25" src="https://github.com/user-attachments/assets/8f09b341-a302-44b4-9c27-164c25635d60" />
+<img width="120" height="260" alt="Simulator Screenshot - iPhone 17 - 2026-03-18 at 14 21 32" src="https://github.com/user-attachments/assets/75e3d37d-308e-4038-9383-089e4e99a23a" />
